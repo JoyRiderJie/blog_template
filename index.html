@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>博客模版</title>
+
+    <!-- 响应式设计 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <!-- 描述和关键词 -->
+    <meta name="description" content="这里是描述内容">
+    <meta name="keywords" content="关键词1,关键词2,关键词3">
+
+    <!-- 引入Vue主题样式 -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify/themes/vue.css"/>
+    <!-- 引入弹框样式 -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/sweetalert/dist/sweetalert.css">
+    <!-- 引入代码高亮样式 -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/prismjs/themes/prism.css"/>
+
+    <!-- 自定义背景样式 -->
+    <style>
+        body {
+            background-image: url('your-background-image.jpg'); /* 替换为您的背景图片地址 */
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+<div id="app">Loading...</div>
+
+<!-- Docsify 核心库 -->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/docsify.min.js"></script>
+
+<!-- 配置Docsify -->
+<script>
+    window.$docsify = {
+        el: '#app',
+        name: '目录',
+        repo: 'https://github.com/JoyRiderJie/JoyRiderJie.github.io', // 修复了转义字符问题
+        loadNavbar: true,
+        coverpage: true,
+        loadSidebar: true,
+        auto2top: true,
+        subMaxLevel: 2,
+        maxLevel: 4,
+        homepage: 'blog-readme.md',
+        alias: {
+            '/.*/_sidebar.md': '/_sidebar.md',
+        },
+        search: {
+            paths: 'auto',
+            placeholder: {
+                '/': '🔍 搜索',
+            },
+            noData: {
+                '/': '找不到结果',
+            },
+            depth: 4,
+            maxAge: 86400000,
+        },
+        footer: {
+            copy: '<span>Copyright &copy; 2022</span>',
+            auth: '<span><a href="https://github.com/" target="_blank">GitHub</a></span>', // 修复了属性值的问题
+            pre: '<hr/>',
+            style: 'text-align: center;',
+        },
+        pagination: {
+            previousText: '上一页',
+            nextText: '下一页',
+            crossChapter: true,
+            crossChapterText: true,
+        },
+        formatUpdated: '{MM}/{DD} {HH}:{mm}',
+    }
+</script>
+
+<!-- 其他插件脚本 -->
+<!-- emoji -->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/emoji.min.js"></script>
+<!-- 复制代码到剪切板 -->
+<script src="//cdn.jsdelivr.net/npm/docsify-copy-code"></script>
+<!-- 搜索功能 -->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/search.min.js"></script>
+<!-- 弹框 -->
+<script src="//cdn.jsdelivr.net/npm/sweetalert/dist/sweetalert.min.js"></script>
+<!-- 图片缩放 -->
+<script src="//cdn.jsdelivr.net/npm/docsify/lib/plugins/zoom-image.min.js"></script>
+<!-- 字数统计 -->
+<script src="//unpkg.com/docsify-count/dist/countable.js"></script>
+<!-- 翻页插件 -->
+<script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+<!-- 侧边栏目录折叠 -->
+<script src="//cdn.jsdelivr.net/npm/docsify-sidebar-collapse/dist/docsify-sidebar-collapse.min.js"></script>
+
+<!-- 用于渲染 LaTex 数学方程 -->
+<script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+
+<!-- 文档页脚增强 -->
+<script src="//cdn.jsdelivr.net/npm/docsify-footer-enh/dist/docsify-footer.min.js"></script>
+
+<!-- C++、Java、python、bash等等语法高亮 -->
+<script src="//cdn.jsdelivr.net/npm/prismjs/components/prism-core.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script>
+<script>
+  Prism.plugins.autoloader.languages_path = '//cdn.jsdelivr.net/npm/prismjs/components/';
+</script>
+
+</body>
+</html>
